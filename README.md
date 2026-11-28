@@ -119,6 +119,160 @@ python3 everfit_agent.py tools     # list Cotlet.dev tools
 python3 everfit_agent.py serve     # start the stdio MCP server (same as no argument)
 ```
 
+## What you can ask your AI to do in Everfit
+
+These are real jobs Everfit users asked about. Cotlet lets ChatGPT, Claude or any MCP client do them in your own signed-in Everfit account.
+
+### Programs and workouts
+
+#### Can ChatGPT or Claude write a 12-week program and put it into my Everfit library for me?
+
+Yes. Everfit's AI Workout Builder makes one workout at a time. With Cotlet, ChatGPT or Claude writes the 12 weeks and your agent builds each workout in your signed-in Everfit Workout Builder and library. Nothing is saved until you say yes.
+
+Ask your agent: "Write a 12-week strength program with 3 workouts a week and build each workout in my Everfit library. Show me week 1 first."
+
+#### Can AI turn my old programs from Google Sheets, PDFs or Notes into Everfit workouts without retyping each one?
+
+Partly. Everfit's PDF import turns one PDF into one workout, and it has no CSV import for programs. With Cotlet, your agent reads your sheet, PDF or notes and builds each workout in your signed-in Workout Builder. Nothing is saved until you say yes.
+
+Ask your agent: "Take the programs in this sheet and build each workout in my Everfit Workout Builder with its exercises, sets and reps. Show me the first one."
+
+#### Can an AI agent swap exercises in a client's Everfit program when they message me that they are travelling?
+
+Yes. With Cotlet, your agent opens the client's training calendar in your signed-in Everfit account and replaces the exercises that need a gym with ones that suit hotel or bodyweight training. Nothing changes until you say yes.
+
+Ask your agent: "Open this client's Everfit program for next week and swap gym exercises for hotel-room alternatives. Show me each swap first."
+
+#### Can an AI assistant assign my clients to the right program or Autoflow when they finish onboarding in Everfit?
+
+Yes. Everfit's Onboarding Flow and Autoflows can already start a program. With Cotlet, your agent checks each client's intake answers in your signed-in account and assigns the program or Autoflow that fits. Nothing is assigned until you say yes.
+
+Ask your agent: "List Everfit clients who finished onboarding this week, pick the right program or Autoflow for each from their answers and assign it."
+
+As an API endpoint: Yes. Save the onboarding check as an endpoint in Cotlet and call it every morning from n8n, Make or Zapier.
+
+#### How do I let clients move or swap workouts in Everfit without messaging me each time?
+
+Yes. Everfit's client settings decide whether a client may replace an exercise, move days or create workouts. With Cotlet, your agent opens each client in your signed-in account and turns the right settings on. Nothing changes until you say yes.
+
+Ask your agent: "Turn on exercise swaps and moving workouts for all my active Everfit clients. Show me the list of clients first."
+
+### Check-ins and progress
+
+#### Can I connect ChatGPT or Claude to Everfit to ask which clients have not logged a workout this week?
+
+Yes. With Cotlet, ChatGPT or Claude reads your signed-in Everfit account, lists the clients with no workout logged this week and drafts a short check-in for each. Nothing is sent until you say yes.
+
+Ask your agent: "List my Everfit clients who logged no workout this week, with their program and last workout, and draft a short check-in for each."
+
+As an API endpoint: Yes. Save the list as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier to get the quiet clients by email.
+
+#### Can AI read my clients' macro logs in Everfit and tell me who is off target this week?
+
+Yes. With Cotlet, your agent reads the Macros journal in your signed-in Everfit account and lists the clients whose logged calories or macros were off target this week, and by how much. It only reads.
+
+Ask your agent: "From the Everfit Macros journal, list clients whose calories or protein were more than 15% off target this week, and by how much."
+
+As an API endpoint: Yes. Save the macro check as an endpoint in Cotlet and call it every Sunday from n8n, Make, Zapier or a script.
+
+#### How do I automatically send check-in reminders and forms to every client every week in Everfit?
+
+Partly. Everfit's Autoflows and form triggers already send forms on a schedule. With Cotlet, your agent sets them up for each client in your signed-in account and lists clients who have not answered. Nothing changes until you say yes.
+
+Ask your agent: "Set up a weekly check-in form for all my active Everfit clients and list who has not answered last week's form."
+
+As an API endpoint: Yes. Save the unanswered check-in list as an endpoint in Cotlet and call it every Tuesday from n8n, Make or Zapier.
+
+### Onboarding and sales
+
+#### How do I connect Jotform or Typeform to Everfit so a signed waiver sends the client their invite link?
+
+Yes. With Cotlet, your agent reads the new signed waivers in Jotform or Typeform and invites each person as a client in your Everfit account, both signed in in your Cloud Browser. Nothing is invited until you say yes.
+
+Ask your agent: "Read today's signed waivers in Jotform and invite each person as a client in Everfit. Show me the list before inviting anyone."
+
+As an API endpoint: Yes. Save the waiver check as an endpoint in Cotlet and call it every hour from n8n, Make or Zapier.
+
+#### How do I connect Stripe or my payment tool to Everfit so new buyers are added as clients and invited without me?
+
+Yes. Everfit's Zapier add-on is on the Studio plan only. With Cotlet, your agent reads new buyers in Stripe and adds and invites each one as a client in your Everfit account, both signed in in your Cloud Browser. Nothing is invited until you say yes.
+
+Ask your agent: "List new Stripe buyers from the last 7 days and add each one as a client in Everfit. Stop before sending invites."
+
+As an API endpoint: Yes. Save the new-buyer step as an endpoint in Cotlet and call it from n8n or Make whenever Stripe records a payment.
+
+#### How do I connect Everfit to Mailchimp or GoHighLevel so new clients get my welcome sequence?
+
+Yes. With Cotlet, your agent reads new clients in your signed-in Everfit account and adds them to Mailchimp or GoHighLevel, both signed in in your Cloud Browser, so your welcome sequence starts. Nothing is added until you say yes.
+
+Ask your agent: "Add every client who joined Everfit this week to my Mailchimp audience with name and email, tagged as new client."
+
+As an API endpoint: Yes. Save the new-client read as an endpoint in Cotlet and call it daily from n8n or Make to push clients into your email tool.
+
+#### How do I bulk import a list of clients into Everfit from a CSV?
+
+Yes. Everfit has Add Multiple Clients with a CSV template. With Cotlet, your agent fills that template from your list, adds the clients in your signed-in account and tells you which rows it could not use. Nothing is added until you say yes.
+
+Ask your agent: "Take the clients in this CSV and add them to Everfit with Add Multiple Clients. Show me any rows that do not fit first."
+
+#### How do I get a report of every sale, renewal and failed payment from Everfit into my accounting?
+
+Partly. Everfit's Payments Sales Analytics has an Export button that emails a file kept for 7 days. With Cotlet, your agent reads the sales it shows in your signed-in account and enters them in your sheet or accounting tool. Nothing is entered until you say yes.
+
+Ask your agent: "Read last month's sales in Everfit Sales Analytics and add one row per sale to my Google Sheet with date, client, package and amount."
+
+As an API endpoint: Yes. Save the sales read as an endpoint in Cotlet and call it monthly from n8n, Make or Zapier to send the rows to your accounting.
+
+### Exports and your data
+
+#### How do I export all my clients, programs and exercise library from Everfit before I switch to another platform?
+
+Yes. Everfit has no bulk export for clients, programs or the exercise library. With Cotlet, your agent goes through your signed-in account page by page and saves each list and each program as a file you keep.
+
+Ask your agent: "Save my Everfit client list, every program with its workouts and my exercise library as separate files before I switch platforms."
+
+#### How do I export a client's full workout history from Everfit into a spreadsheet?
+
+Yes. Everfit prints one workout at a time as a PDF. With Cotlet, your agent reads the client's training calendar in your signed-in account and puts every logged workout, with exercises, weights and reps, into one spreadsheet.
+
+Ask your agent: "Export this client's full Everfit workout history into one spreadsheet with date, exercise, sets, reps and weight."
+
+As an API endpoint: Yes. Save the history read as an endpoint in Cotlet that takes a client name, and call it from n8n, Make or a script.
+
+#### How do I connect Everfit to Google Sheets so my client check-ins and weights land in one spreadsheet automatically?
+
+Yes. With Cotlet, your agent reads the new check-in forms and weights in your signed-in Everfit account and adds them as rows to your Google Sheet, signed in in the same Cloud Browser. Nothing is added until you say yes.
+
+Ask your agent: "Add this week's Everfit check-in answers and weights to my Google Sheet, one row per client."
+
+As an API endpoint: Yes. Save the weekly read as an endpoint in Cotlet and call it every Sunday from n8n, Make or Zapier to fill the sheet.
+
+#### How do I move my clients' macro and nutrition logs out of Everfit, or sync them with MyFitnessPal automatically?
+
+Partly. Everfit's MyFitnessPal and Cronometer links sit in the client's own app, and Cotlet cannot change them. With Cotlet, your agent reads each client's Macros journal in your signed-in account and saves the logs as a spreadsheet you keep.
+
+Ask your agent: "Save every client's Everfit macro and meal logs for the last 30 days as one spreadsheet, one row per day and client."
+
+As an API endpoint: Yes. Save the nutrition read as an endpoint in Cotlet and call it weekly from n8n, Make or Zapier to copy the logs into a sheet.
+
+### Wearables and calendars
+
+#### How do I connect Everfit to Garmin, Strava or Apple Health so my clients' workouts show up without logging by hand?
+
+Partly. Everfit syncs selected metrics from Apple Health, Garmin and Fitbit in the client's own app, and Cotlet cannot change that sync. With Cotlet, your agent reads what reached each client's log in your signed-in account and lists clients with gaps. It only reads.
+
+Ask your agent: "List the Everfit clients with no logged workout or steps in the last 5 days, so I can check their wearable sync."
+
+As an API endpoint: Yes. Save the gap check as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier.
+
+#### How do I connect Everfit to Acuity, Calendly or Google Calendar so check-in calls and sessions are booked automatically?
+
+Partly. Everfit has its own Booking and Scheduling features and a Google Calendar integration. With Cotlet, your agent reads your upcoming sessions in Everfit and adds or updates the events in Google Calendar or Acuity, signed in in the same Cloud Browser. Nothing is added until you say yes.
+
+Ask your agent: "Copy next week's Everfit sessions and check-in calls into my Google Calendar, one event per session with the client name."
+
+As an API endpoint: Yes. Save the sessions read as an endpoint in Cotlet and call it daily from n8n or Make to update your calendar.
+
 ## Questions from Everfit coaches
 **Does Everfit have an API or Zapier on my plan?**
 
